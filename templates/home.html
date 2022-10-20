@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Premium Insurance Cost Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Stock Market Price Prediction</h1>
+      <div class="row center">
+      </div>
+
+<div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name" style="font-size: 20px"><b>High</b></label>
+            <br>
+            <input placeholder="Last Stock High" name="age" id="age" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name" style="font-size: 20px"><b>Low</b></label>
+            <br>
+            <input id="_name" name="Last Stock Low" placeholder="Last Stock Low" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="last_name" style="font-size: 20px"><b>Last</b></label>
+              <br>
+            <input id="bmi" name="Previous Day last Stock" placeholder="Previous Day last Stock"  type="text" class="validate">
+          </div>
+
+        <div class="input-field col s4">
+
+            <label for="last_name" style="font-size: 20px"><b>close</b></label>
+              <br>
+            <input id="children" name="Stock Rate at end of the day" placeholder="Stock Rate at end of the day"  type="text" class="validate">
+  
+          </div>
+
+        <div class="input-field col s4">
+            <label for="smoker" style="font-size: 20px"><b>Total Trade Quantity</b></label>
+            <br>
+            <input id="smoker" name="Total Trade Quantity" placeholder="Total Trade Quantity" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="region" style="font-size: 20px"><b>Turnover (Lacs)</b></label>
+            <br>
+            <input id="region" name="Turnover (Lacs)" placeholder="Turnover (Lacs)" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light lamber lighten-1">Predict Stock</button>
+      </div>
+    </form>
+      </div>
+      <div class="dark-text">
+      <br>
+        <h4>{{pred}}</h4><br>
+      </div>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
